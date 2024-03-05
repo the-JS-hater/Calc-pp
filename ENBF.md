@@ -1,0 +1,65 @@
+#__Calc++ ENBF__
+
+
+```
+PROGRAM = [calc STATEMENTS]
+
+STATEMENTS = 
+        STATEMENT STATEMENTS
+      | STATEMENT
+
+STATEMENT =
+        ASSIGNMENT
+      | REPETITION
+      | SELECTION
+      | INPUT
+      | OUTPUT
+
+ASSIGNMENT = [set TYPE VARIABLE EXPRESSION]
+
+REPETITION = [while CONDITION STATEMENTS]
+
+SELECTION = 
+        [if CONDITION STATEMENT else STATEMENT]
+      | [if CONDITION STATEMENT]
+
+INPUT = [read TYPE VARIABLE]
+
+OUTPUT = [print EXPRESSION]
+
+EXPRESSION =
+        CONSTANT
+      | VARIABLE
+      | BINARYEXPR
+      | FUNCTION
+
+FUNCTION = 
+        [funk STRING STATEMENTS return EXPRESSION]
+      | [funk STRING PARAMETERS STATEMENTS return EXPRESSION]
+
+PARAMETERS = 
+        VARIABLE PARAMETERS
+      | CONSTANT PARAMETERS
+      | VARIABLE
+      | CONSTANT
+
+BINARYEXPR = [EXPRESSION BINARYOPER EXPRESSION]
+
+CONDITION = [EXPRESSION CONDOPER EXPRESSION]
+
+BINARYOPER = + | - | * | / 
+
+CONDOPER = < | > | <= | >= | =
+
+VARIABLE = [a..z]*
+
+CONSTANT = int | float | STRING
+
+STRING = "[ .. ~]\{"}"
+
+TYPE = 
+        int
+      | float
+      | string
+
+```
